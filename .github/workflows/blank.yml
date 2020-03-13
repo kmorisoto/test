@@ -30,10 +30,16 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-    
+    - name: Delete multiple branches
+      uses: dawidd6/action-delete-branch@v2.0.1
+      with:
+        # Github token
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        # Branches to delete (comma separated)
+        branches: release-pr
     - name: Create Branch
       uses: peterjgrainger/action-create-branch@v1.0.0
-      env:
+      with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # The branch to create
         branch: release-pr # optional, default is release-candidate
