@@ -30,8 +30,8 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-    - name: Delete multiple branches
-      uses: dawidd6/action-delete-branch@v2.0.1
+    - name: Delete branch
+      uses: dawidd6/action-delete-branch@master
       with:
         # Github token
         github_token: ${{ secrets.GITHUB_TOKEN }}
