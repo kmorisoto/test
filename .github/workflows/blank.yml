@@ -34,5 +34,6 @@ jobs:
     - name: Create Branch
       uses: peterjgrainger/action-create-branch@v1.0.0
       with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
         # The branch to create
         branch: release-pr # optional, default is release-candidate
