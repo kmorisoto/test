@@ -30,3 +30,9 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+    
+    - name: Create Branch
+      uses: peterjgrainger/action-create-branch@v1.0.0
+      with:
+        # The branch to create
+        branch: release-pr # optional, default is release-candidate
